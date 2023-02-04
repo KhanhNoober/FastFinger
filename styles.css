@@ -13,8 +13,10 @@
     --color-keycap-third: #6b0078;
     --color-keycap-fourth: #380356;
 }
+
 /* Override tag */
-html, body {
+html,
+body {
     margin: 0px;
     padding: 0px;
     background-color: var(--color-primary);
@@ -58,10 +60,76 @@ input[type=text]::placeholder {
 }
 
 /* id  */
-#container, #container > div, #container > div > * {
+#nofication,
+#container {
+    position: absolute;
+    width: 100%;
+}
+
+#nofication {
     display: flex;
     justify-content: center;
-    align-self: center;
+    align-items: center;
+    flex-direction: column;
+
+    width: 100%;
+    height: 100vh;
+
+    background-color: rgba(0, 0, 0, 0.9);
+}
+
+#nofication>div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    padding: 1rem 5rem;
+    border-radius: 2rem;
+    background-color: var(--color-secondary);
+}
+
+#nofication>div>p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 1rem;
+
+    margin-bottom: 3rem;
+}
+
+#nofication>div>button {
+    color: white;
+    font-size: 20px;
+    font-weight: 600;
+
+    background-color: var(--color-keycap-secondary);
+    border: 0px;
+    border-radius: 2rem;
+    padding: 1.5rem 2.5rem;
+    margin-bottom: 1rem;
+
+    cursor: pointer;
+}
+
+#nofication>div>button:hover {
+    filter: brightness(0.9);
+}
+
+#nofication>div>button:active {
+    filter: brightness(0.8);
+}
+
+#container,
+#container>div,
+#container>div>* {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     flex-direction: column;
 }
 
@@ -73,18 +141,20 @@ input[type=text]::placeholder {
     width: 100%;
 }
 
-#keyboard-container > div{
+#keyboard-container>div {
     width: auto;
 }
 
-#keyboard-container > div > div{
+#keyboard-container>div>div {
     display: flex;
     justify-content: center;
     align-self: center;
     justify-content: row;
 }
 
-#line-1 > div, #line-2 > div, #line-3 > div {
+#line-1>div,
+#line-2>div,
+#line-3>div {
     font-size: 25px;
     font-weight: 600;
 
@@ -103,11 +173,15 @@ input[type=text]::placeholder {
     cursor: pointer;
 }
 
-#line-1 > div:hover, #line-2 > div:hover, #line-3 > div:hover {
+#line-1>div:hover,
+#line-2>div:hover,
+#line-3>div:hover {
     filter: brightness(0.9);
 }
 
-#line-1 > div:active, #line-2 > div:active, #line-3 > div:active {
+#line-1>div:active,
+#line-2>div:active,
+#line-3>div:active {
     padding-top: 0.25rem;
     height: 4.75rem;
     filter: brightness(0.8);
@@ -122,14 +196,14 @@ input[type=text]::placeholder {
     margin-bottom: 1rem;
 }
 
-.input > div {
+.input>div {
     padding: 2rem;
     background-color: var(--color-secondary);
     width: 100%;
     border-radius: 1rem;
 }
 
-.input > div > div {
+.input>div>div {
     font-size: 50px;
     display: flex;
     justify-content: center;
@@ -142,7 +216,7 @@ input[type=text]::placeholder {
 }
 
 
-.score > div > div {
+.score>div>div {
     font-size: 40px;
     display: flex;
     justify-content: center;
@@ -153,4 +227,13 @@ input[type=text]::placeholder {
     padding-top: 0.25rem;
     height: 4.75rem !important;
     filter: brightness(0.8);
+}
+
+#score,
+#error {
+    margin: 0rem 1rem;
+}
+
+.hide {
+    display: none !important;
 }

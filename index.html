@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,6 +8,7 @@
     <link rel="stylesheet" href="styles.css">
     <title>Document</title>
 </head>
+
 <body>
     <div id="container">
         <div>
@@ -23,7 +25,7 @@
         </div>
         <div class="score">
             <div>
-                <div>Score: <span id="score">0</span></div>
+                <div>Score: <span id="score">0</span> Error: <span id="error">0</span> </div>
                 <div id="time-left">10</div>
             </div>
         </div>
@@ -50,7 +52,7 @@
                     <div id="J" onclick="addInput('j')">J</div>
                     <div id="K" onclick="addInput('k')">K</div>
                     <div id="L" onclick="addInput('l')">L</div>
-                </div >
+                </div>
                 <div id="line-3">
                     <div id="Z" onclick="addInput('z')">Z</div>
                     <div id="X" onclick="addInput('x')">X</div>
@@ -63,9 +65,28 @@
             </div>
         </div>
     </div>
-    <button id="start">start</button>
+    <div id="nofication">
+        <div id="first-come">
+            <h1>Tay nhanh hơn não</h1>
+            <p>
+                <span>Nhập từ giống trên màn hình</span>
+                <span>Bạn có 10s để nhập từ</span>
+                <span>Nhập sai 5 lần hoặc hết thời gian sẽ thua</span>
+            </p>
+            <button onclick="playGame()">Play</button>
+        </div>
+        <div id="restart" class="hide">
+            <h1>Game Over</h1>
+            <h2>Score: <span id="final-score">0</span> Error: <span id="final-error">0</span> </h2>
+            <button onclick="playGame()">Play Again</button>
+        </div>
+        <div id="countdown" style="background-color: rgba(0, 0, 0, 0.9) !important;" class="hide">
+            <h1>3</h1>
+        </div>
+    </div>
     <script defer src="index.js"></script>
     <script defer src="word.js"></script>
     <script defer src="codeThieuNhi.js"></script>
 </body>
+
 </html>
