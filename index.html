@@ -17,52 +17,55 @@
         </div>
         <div class="input">
             <div>
-                <div>Example</div>
-                <input type="text" name="input-word" id="input" placeholder="Input here">
+                <div id="word">Example</div>
+                <input type="text" name="input-word" id="input" placeholder="Input here" disabled>
             </div>
         </div>
         <div class="score">
             <div>
                 <div>Score: <span id="score">0</span></div>
-                <div>10</div>
+                <div id="time-left">10</div>
             </div>
         </div>
         <div id="keyboard-container">
             <div>
                 <div id="line-1">
-                    <div id="keycap">Q</div>
-                    <div id="keycap">W</div>
-                    <div id="keycap">E</div>
-                    <div id="keycap">R</div>
-                    <div id="keycap">T</div>
-                    <div id="keycap">Y</div>
-                    <div id="keycap">U</div>
-                    <div id="keycap">I</div>
-                    <div id="keycap">O</div>
+                    <div id="Q" onclick="addInput('q')">Q</div>
+                    <div id="W" onclick="addInput('w')">W</div>
+                    <div id="E" onclick="addInput('e')">E</div>
+                    <div id="R" onclick="addInput('r')">R</div>
+                    <div id="T" onclick="addInput('t')">T</div>
+                    <div id="Y" onclick="addInput('y')">Y</div>
+                    <div id="U" onclick="addInput('u')">U</div>
+                    <div id="I" onclick="addInput('i')">I</div>
+                    <div id="O" onclick="addInput('o')">O</div>
                 </div>
                 <div id="line-2">
-                    <div id="keycap">A</div>
-                    <div id="keycap">S</div>
-                    <div id="keycap">D</div>
-                    <div id="keycap">F</div>
-                    <div id="keycap">G</div>
-                    <div id="keycap">H</div>
-                    <div id="keycap">J</div>
-                    <div id="keycap">K</div>
-                    <div id="keycap">L</div>
+                    <div id="A" onclick="addInput('a')">A</div>
+                    <div id="S" onclick="addInput('s')">S</div>
+                    <div id="D" onclick="addInput('d')">D</div>
+                    <div id="F" onclick="addInput('f')">F</div>
+                    <div id="G" onclick="addInput('g')">G</div>
+                    <div id="H" onclick="addInput('h')">H</div>
+                    <div id="J" onclick="addInput('j')">J</div>
+                    <div id="K" onclick="addInput('k')">K</div>
+                    <div id="L" onclick="addInput('l')">L</div>
                 </div >
                 <div id="line-3">
-                    <div id="keycap">Z</div>
-                    <div id="keycap">X</div>
-                    <div id="keycap">C</div>
-                    <div id="keycap">V</div>
-                    <div id="keycap">B</div>
-                    <div id="keycap">N</div>
-                    <div id="keycap">M</div>
+                    <div id="Z" onclick="addInput('z')">Z</div>
+                    <div id="X" onclick="addInput('x')">X</div>
+                    <div id="C" onclick="addInput('c')">C</div>
+                    <div id="V" onclick="addInput('v')">V</div>
+                    <div id="B" onclick="addInput('b')">B</div>
+                    <div id="N" onclick="addInput('n')">N</div>
+                    <div id="M" onclick="addInput('m')">M</div>
                 </div>
             </div>
         </div>
     </div>
-    <script src="index.js"></script>
+    <button id="start">start</button>
+    <script defer src="index.js"></script>
+    <script defer src="word.js"></script>
+    <script defer src="codeThieuNhi.js"></script>
 </body>
 </html>

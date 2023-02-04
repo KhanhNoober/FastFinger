@@ -84,7 +84,7 @@ input[type=text]::placeholder {
     justify-content: row;
 }
 
-#keycap {
+#line-1 > div, #line-2 > div, #line-3 > div {
     font-size: 25px;
     font-weight: 600;
 
@@ -97,22 +97,21 @@ input[type=text]::placeholder {
 
     background-color: var(--color-keycap-primary);
     margin: 0.3rem;
-    border-radius: 0.5rem;
+    border-radius: 50%;
     border-bottom: 3px var(--color-keycap-third) solid;
 
     cursor: pointer;
 }
 
-#keycap:hover {
+#line-1 > div:hover, #line-2 > div:hover, #line-3 > div:hover {
     filter: brightness(0.9);
 }
 
-#keycap:active {
+#line-1 > div:active, #line-2 > div:active, #line-3 > div:active {
     padding-top: 0.25rem;
     height: 4.75rem;
     filter: brightness(0.8);
 }
-
 
 /* class */
 .input {
@@ -142,9 +141,16 @@ input[type=text]::placeholder {
     margin-bottom: 2rem;
 }
 
+
 .score > div > div {
     font-size: 40px;
     display: flex;
     justify-content: center;
     align-self: center;
+}
+
+.active-key {
+    padding-top: 0.25rem;
+    height: 4.75rem !important;
+    filter: brightness(0.8);
 }
