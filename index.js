@@ -3,6 +3,9 @@ const word = document.querySelector('#word');
 const timeLeft = document.querySelector('#time-left');
 const error = document.querySelector('#error');
 const score = document.querySelector('#score');
+const displayError = document.querySelector('#display-error');
+const displayScore = document.querySelector('#display-score');
+
 const html = document.querySelector('html');
 const start = document.querySelector('#start');
 
@@ -45,8 +48,16 @@ input.addEventListener('keypress', (e) => {
     if (e.key === 'Enter') {
         if (input.value === currentWord) {
             currentScore += 1;
+
+            displayScore.classList.add('correct');
+
+            setTimeout(() => {displayScore.classList.remove('correct')}, 1000);
             score.innerText = currentScore;
         } else {
+            displayError.classList.add('error');
+
+            setTimeout(() => {displayError.classList.remove('error')}, 1000);
+
             currentError += 1;
             error.innerText = currentError;
             if (currentError === MAX_ERROR) {

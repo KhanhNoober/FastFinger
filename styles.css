@@ -237,3 +237,11 @@ input[type=text]::placeholder {
 .hide {
     display: none !important;
 }
+
+.error {
+    color: red !important;
+}
+
+.correct {
+    color: lime !important;
+}
