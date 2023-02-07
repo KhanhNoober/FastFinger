@@ -10,9 +10,10 @@ const html = document.querySelector('html');
 const start = document.querySelector('#start');
 
 const MAX_ERROR = 5;
+const MAX_TIME = 7.5;
 
 let timer;
-let time = 100;
+let time = MAX_TIME * 10;
 
 let currentWord = "";
 
@@ -44,20 +45,21 @@ html.addEventListener('keyup', (e) => {
     catch { }
 });
 
+let timeoutScore;
+let timeoutError;
+
 input.addEventListener('keypress', (e) => {
     if (e.key === 'Enter') {
         if (input.value === currentWord) {
             currentScore += 1;
-
             displayScore.classList.add('correct');
-
-            setTimeout(() => {displayScore.classList.remove('correct')}, 1000);
+            clearTimeout(timeoutScore);
+            timeoutScore = setTimeout(() => {displayScore.classList.remove('correct')}, 1000);
             score.innerText = currentScore;
         } else {
             displayError.classList.add('error');
-
-            setTimeout(() => {displayError.classList.remove('error')}, 1000);
-
+            clearTimeout(timeoutError);
+            timeoutError = setTimeout(() => {displayError.classList.remove('error')}, 1000);
             currentError += 1;
             error.innerText = currentError;
             if (currentError === MAX_ERROR) {
@@ -75,7 +77,7 @@ function stopTime() {
 }
 
 function resetTime() {
-    time = 100;
+    time = MAX_TIME * 10;
 }
 
 /* Handle lost functions */
